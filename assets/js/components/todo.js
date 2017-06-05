@@ -1,13 +1,13 @@
 "use strict";
 
 const Todo = () => {
-	const parent = $("<div class="white-card"></div>");
-	const input = $("<input id="input-item" type="text" placeholder="Ingresa la tarea"></input>");
-	const todoTitle = $("<p>To Do Items:</p>");
-	const list = $("<div class="list"></div>");
-	const hr = $("<hr>");
-	const completedTitle = $("<p>Completed Items</p>");
-	const completedList = $("<div class="completed"></div>");
+	const parent = $('<div class="white-card"></div>');
+	const input = $('<input id="input-item" type="text" placeholder="Ingresa la tarea"></input>');
+	const todoTitle = $('<p>To Do Items:</p>');
+	const list = $('<div class="list"></div>');
+	const hr = $('<hr>');
+	const completedTitle = $('<p>Completed Items</p>');
+	const completedList = $('<div class="completed"></div>');
 
 	parent.append(input);
 	parent.append(todoTitle);
@@ -27,7 +27,7 @@ const Todo = () => {
 				reRender(list,completedList);
 			}
 		}
-	}):
+	});
 
 	return parent;
 }
@@ -45,10 +45,10 @@ const reRender = (todoList,completedList) => {
 }
 
 const TodoItem = (data,update) => {
-	const todo = $("<div class="todo"></div>");
-	const checkbox = $("<input type="checkbox"></input>");
-	const span = $("<span>"+data.text+"</span>");
-	const remove = $("<button>Remove</button>");
+	const todo = $('<div class="todo"></div>');
+	const checkbox = $('<input type="checkbox"></input>');
+	const span = $('<span>'+data.text+'</span>');
+	const remove = $('<button>Remove</button>');
 
 	todo.append(checkbox);
 	todo.append(span);
